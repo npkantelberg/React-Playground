@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.js$|jsx/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       }
@@ -18,7 +18,11 @@ module.exports = {
   },
   output: {
     filename: 'transformed.js',
-    path: __dirname + "/build"
+    path: __dirname + "/build",
+    publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [HTMLWebpackPluginConfig]
 };

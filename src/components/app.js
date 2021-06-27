@@ -1,13 +1,15 @@
 import React from 'react';
+import users from '../test-data';
+import User from '../components/User';
+import Game from './TicTacToe';
 
 class App extends React.Component{
   render(){
     return(
-      <div className="test-div">
-        Hello World!!!
-      </div>
+      <Game />
     )
   }
 }
-
 export default App;
+
+
